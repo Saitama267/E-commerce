@@ -1,13 +1,15 @@
 namespace Core.Entities
 {
-    public class Product
+    public class Product : BaseEntity
     {
-        public int Id { get; set; }
         public string Name { get; set; }
-        // public string Author { get; set; }
-        // public DateOnly DateOfPublish { get; set; }
-        // public string Publisher { get; set; }
-        // public int NumberOfPages { get; set; }
-
+        public string Description { get; set; }
+        public decimal Price{get;set;}
+        public string PictureUrl { get; set; }
+        public int ProductTypeId { get; set; }
+        public int ProductBrandId { get; set; }
+        public ProductType ProductType  { get; set; }
+        public ProductBrand ProductBrand { get; set; }
     }
+
 }
